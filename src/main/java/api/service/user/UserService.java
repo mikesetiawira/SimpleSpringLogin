@@ -1,6 +1,6 @@
-package service.user;
+package api.service.user;
 
-import domain.User;
+import api.domain.User;
 
 public interface UserService {
     User validate(String username, String password);

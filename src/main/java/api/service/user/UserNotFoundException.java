@@ -1,4 +1,4 @@
-package service.user;
+package api.service.user;
 
 public class UserNotFoundException extends RuntimeException{
     public UserNotFoundException(String username){

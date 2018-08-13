@@ -1,6 +1,6 @@
-package controller;
+package api.controller;
 
-import domain.User;
+import api.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,12 +9,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-import service.user.UserNotFoundException;
-import service.user.UserService;
-import service.user.WrongFormatException;
+import api.service.user.UserNotFoundException;
+import api.service.user.UserService;
+import api.service.user.WrongFormatException;
 
-@Controller
+@RequestMapping("/login")
+@RestController
 public class UserWebController {
 
     private final Logger logger = LoggerFactory.getLogger(UserWebController.class);
@@ -22,13 +24,13 @@ public class UserWebController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value="/login/go", method = RequestMethod.GET)
+    @RequestMapping(value="/", method = RequestMethod.GET)
     public ModelAndView home(ModelMap model,
                              @RequestParam("username")String username,
                              @RequestParam("password")String password){
         try{
             User user = userService.validate(username, password);
-            model.addAttribute("service/user",user);
+            model.addAttribute("api/service/user",user);
         }
 
         catch(UserNotFoundException e){

@@ -1,10 +1,10 @@
-package service.user;
+package api.service.user;
 
-import domain.User;
+import api.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import api.repository.UserRepository;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

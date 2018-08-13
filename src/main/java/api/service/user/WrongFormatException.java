@@ -1,4 +1,4 @@
-package service.user;
+package api.service.user;
 
 public class WrongFormatException extends RuntimeException {
     public WrongFormatException(String username){
