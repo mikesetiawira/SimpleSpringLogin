@@ -14,7 +14,7 @@
     <div></div>
 
     <div class="row">
-        <form id="login", method="get", action="/go">
+        <form id="login", method="POST", action="/go", modelAttribute = "user">
             <div class="small-3 columns">
                 <input type="text"  name="username" >
             </div>

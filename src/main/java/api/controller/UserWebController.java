@@ -28,11 +28,12 @@ public class UserWebController {
     public String index(ModelMap model){
         return "login";
     }
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(name="/go",method = RequestMethod.POST)
     public ModelAndView home(ModelMap model,
                              @RequestParam("username")String username,
                              @RequestParam("password")String password){
         try{
+            //validate the user from the form
             User user = userService.validate(username, password);
             model.addAttribute("api/service/user",user);
         }
