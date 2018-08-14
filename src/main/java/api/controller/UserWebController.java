@@ -15,7 +15,7 @@ import api.service.user.UserNotFoundException;
 import api.service.user.UserService;
 import api.service.user.WrongFormatException;
 
-@RequestMapping("/")
+@RequestMapping("")
 @RestController
 public class UserWebController {
 
@@ -26,7 +26,7 @@ public class UserWebController {
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView index(ModelMap model){
-        return new ModelAndView("/login.jsp");
+        return new ModelAndView("/login");
     }
     @RequestMapping(name="/go",method = RequestMethod.POST)
     public ModelAndView home(ModelMap model,

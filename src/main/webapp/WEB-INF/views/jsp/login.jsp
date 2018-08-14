@@ -24,7 +24,7 @@
             </div>
 
             <div class="small-5 columns end">
-                <button id="button-id" type="submit">Search Teams</button>
+                <button id="button-id" type="submit">Submit</button>
             </div>
 
 
