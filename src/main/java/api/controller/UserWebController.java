@@ -25,8 +25,8 @@ public class UserWebController {
     UserService userService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String index(ModelMap model){
-        return "login";
+    public ModelAndView index(ModelMap model){
+        return new ModelAndView("/login.jsp");
     }
     @RequestMapping(name="/go",method = RequestMethod.POST)
     public ModelAndView home(ModelMap model,
