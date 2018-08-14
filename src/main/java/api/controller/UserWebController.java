@@ -15,7 +15,7 @@ import api.service.user.UserNotFoundException;
 import api.service.user.UserService;
 import api.service.user.WrongFormatException;
 
-@RequestMapping("/login")
+@RequestMapping("/")
 @RestController
 public class UserWebController {
 
@@ -24,7 +24,11 @@ public class UserWebController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value="/", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
+    public String index(ModelMap model){
+        return "login";
+    }
+    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView home(ModelMap model,
                              @RequestParam("username")String username,
                              @RequestParam("password")String password){
@@ -45,7 +49,7 @@ public class UserWebController {
             model.addAttribute("error",e.getMessage());
             return new ModelAndView("/login",model) ;
         }
-        return new ModelAndView("redirect:home",model);
+        return new ModelAndView("/home",model);
     }
 
 }

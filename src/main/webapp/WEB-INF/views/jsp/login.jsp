@@ -7,7 +7,9 @@
 <html lang="en">
 
 <jsp:include page="../fragments/header.jsp" />
-
+<head>
+     <title>SimpleSpringLogin</title>
+</head>
 <body>
     <div></div>
 
