@@ -46,8 +46,8 @@ public class User {
         return isDeleted;
     }
 
-    public void setIsDeleted(char isDeleted) {
-        this.isDeleted = isDeleted;
+    public void Delete(char isDeleted) {
+        this.isDeleted = '1';
     }
 
     public String getName() {
