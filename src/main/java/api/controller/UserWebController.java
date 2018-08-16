@@ -16,6 +16,7 @@ import api.service.user.UserNotFoundException;
 import api.service.user.UserService;
 import api.service.user.WrongFormatException;
 
+//also implmenets errorcontroller to redirect the path should the path mapping gone wrong
 @RequestMapping("")
 @RestController
 public class UserWebController implements ErrorController {

@@ -43,6 +43,7 @@ public class UserServiceImpl implements  UserService{
     }
 
     public boolean isEmail(String username){
+        //regex pattern for email, return true if username is formed as the pattern.
         Pattern pattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}");
         Matcher match = pattern.matcher(username);
 
